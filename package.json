@@ -1,7 +1,7 @@
 {
-  "name": "Ecommerce-app-2023",
+  "name": "Bizzbuzz",
   "version": "1.0.0",
-  "description": "ecommerce rest api",
+  "description": "Bizzbuzz",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -11,8 +11,8 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
-  "author": "Techinfoyt",
-  "license": "MIT",
+  "author": "Bizzbuzz",
+  "license": "",
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
     "bcrypt": "^5.1.0",

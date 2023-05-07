@@ -4,11 +4,11 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Policy from "./pages/Policy";
 import Pagenotfound from "./pages/Pagenotfound";
-import Register from "./pages/Auth/Register";
-import Login from "./pages/Auth/Login";
+import Register from "./newnew/pages/register";
+import Login from "./newnew/pages/login";
 import Dashboard from "./pages/user/Dashboard";
 import PrivateRoute from "./components/Routes/Private";
-import ForgotPasssword from "./pages/Auth/ForgotPasssword";
+import ForgotPassword from "./newnew/pages/reset";
 import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import CreateCategory from "./pages/Admin/CreateCategory";
@@ -24,6 +24,7 @@ import Categories from "./pages/Categories";
 import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/Admin/AdminOrders";
+import ForgotPasssword from './pages/Auth/ForgotPasssword';
 function App() {
   return (
     <>
