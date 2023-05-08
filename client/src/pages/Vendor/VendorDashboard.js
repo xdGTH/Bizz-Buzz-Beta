@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
-import UserMenu from "../../components/Layout/UserMenu";
+import UserMenu from "../../components/Layout/VendorMenu";
 import { useAuth } from "../../context/auth";
 import { Card, Avatar } from "antd";
 import { UserOutlined, MailOutlined, EnvironmentOutlined } from "@ant-design/icons";
 import Box from "@mui/material/Box";
 
-const Dashboard = () => {
+const VendorDashboard = () => {
   const [auth] = useAuth();
 
   const containerStyle = {
@@ -76,4 +76,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default VendorDashboard;

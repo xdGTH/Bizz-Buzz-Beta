@@ -8,6 +8,7 @@ import Register from "./newnew/pages/register";
 import Login from "./newnew/pages/login";
 import Dashboard from "./pages/user/Dashboard";
 import PrivateRoute from "./components/Routes/Private";
+import VendorRoute from "./components/Routes/VendorRoute";
 import ForgotPassword from "./newnew/pages/reset";
 import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
@@ -25,7 +26,13 @@ import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/Admin/AdminOrders";
 import Reset from "./newnew/pages/reset";
-// import ForgotPasssword from './pages/Auth/ForgotPasssword';
+import VendorDashboard from "./pages/Vendor/VendorDashboard";
+import VendorProductCreate from "./pages/Vendor/VendorProductCreate";
+import VendorProductUpdate from "./pages/Vendor/VendorProductUpdate";
+import VendorProducts from "./pages/Vendor/VendorProduct";
+import VendorUsers from "./pages/Vendor/VendorUsers";
+import VendorOrders from './pages/Vendor/VendorOrders';
+
 function App() {
   return (
     <>
@@ -49,6 +56,14 @@ function App() {
           <Route path="admin/products" element={<Products />} />
           <Route path="admin/users" element={<Users />} />
           <Route path="admin/orders" element={<AdminOrders />} />
+        </Route>
+        <Route path="/dashboard" element={<VendorRoute />}>
+          <Route path="vendor" element={<VendorDashboard />} />
+          <Route path="vendor/create-product" element={<VendorProductCreate />} />
+          <Route path="vendor/product/:slug" element={<VendorProductUpdate />} />
+          <Route path="vendor/products" element={<VendorProducts />} />
+          <Route path="vendor/users" element={<VendorUsers />} />
+          <Route path="vendor/orders" element={<VendorOrders />} />
         </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<Reset />} />
