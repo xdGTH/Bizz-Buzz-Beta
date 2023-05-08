@@ -131,7 +131,7 @@ const Login = () => {
                                 <Box
                                     style={{
                                         backgroundSize: "cover",
-                                        height: "70vh",
+                                        height: "75vh",
                                         miniHeight: "500px",
                                         backgroundColor: "#076585",
                                     }}
@@ -178,13 +178,13 @@ const Login = () => {
                                                     />
                                                 </Grid>
                                                 <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
-                                                    <Stack direction="row" spacing={2}>
-                                                        <FormControlLabel
+                                                    {/* <Stack direction="row" spacing={2}> */}
+                                                        {/* <FormControlLabel
                                                             sx={{ width: "60%" }}
                                                             onClick={() => setRemember(!remember)}
                                                             control={<Checkbox checked={remember} />}
                                                             label="Remember Me"
-                                                        />
+                                                        /> */}
                                                         <Typography
                                                             variant="body1"
                                                             component="span"
@@ -195,7 +195,7 @@ const Login = () => {
                                                         >
                                                             Forgot password?
                                                         </Typography>
-                                                    </Stack>
+                                                    {/* </Stack> */}
                                                 </Grid>
                                                 <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
                                                     <Button

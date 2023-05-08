@@ -122,14 +122,14 @@ const Register = () => {
                                 <Box
                                     style={{
                                         backgroundSize: "cover",
-                                        height: "70vh",
+                                        height: "75vh",
                                         miniHeight: "500px",
                                         backgroundColor: "#076585",
                                     }}
                                 >
                                     <ThemeProvider theme={darkTheme}>
                                         <Container>
-                                            <Box height={25} />
+                                            <Box height={10} />
                                             <Box >
                                                 <Box sx={center}>
                                                     <Avatar sx={{ ml: "35px", mb: "4px", bgcolor: "#ffffff" }}>
@@ -146,7 +146,7 @@ const Register = () => {
                                                 onSubmit={handleSubmit}
                                                 sx={{ mt: 2 }}
                                             />
-                                            <Box height={25} />
+                                            <Box height={0} />
                                             <Grid container spacing={1}>
                                                 <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
                                                     <TextField
@@ -182,7 +182,7 @@ const Register = () => {
                                                         required
                                                     />
                                                 </Grid>
-                                                <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
+                                                {/* <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
                                                     <TextField
                                                         type="password"
                                                         value={password}
@@ -192,7 +192,7 @@ const Register = () => {
                                                         placeholder="Re-Enter Your Password"
                                                         required
                                                     />
-                                                </Grid>
+                                                </Grid> */}
 
                                                 <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
                                                     <TextField

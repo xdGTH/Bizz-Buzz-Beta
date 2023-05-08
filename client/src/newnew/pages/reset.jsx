@@ -125,7 +125,7 @@ const Reset = () => {
                                 <Box
                                     style={{
                                         backgroundSize: "cover",
-                                        height: "70vh",
+                                        height: "75vh",
                                         miniHeight: "500px",
                                         backgroundColor: "#076585",
                                     }}
