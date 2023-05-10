@@ -15,7 +15,7 @@ import {
   searchProductController,
   updateProductController,
 } from "../controllers/productController.js";
-import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
+import { isAdmin,isVendor, requireSignIn } from "../middlewares/authMiddleware.js";
 import formidable from "express-formidable";
 
 const router = express.Router();
@@ -24,7 +24,7 @@ const router = express.Router();
 router.post(
   "/create-product",
   requireSignIn,
-  isAdmin,
+  isVendor,
   formidable(),
   createProductController
 );
@@ -32,7 +32,7 @@ router.post(
 router.put(
   "/update-product/:pid",
   requireSignIn,
-  isAdmin,
+  isVendor,
   formidable(),
   updateProductController
 );

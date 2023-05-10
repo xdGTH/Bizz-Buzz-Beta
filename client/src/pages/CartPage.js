@@ -3,11 +3,13 @@ import Layout from "./../components/Layout/Layout";
 import { useCart } from "../context/cart";
 import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom";
-// import DropIn from "braintree-web-drop-in-react";
+import KhaltiCheckout from "khalti-checkout-web";
+import config from "./khaltiConfig";
 import { AiFillWarning } from "react-icons/ai";
 import axios from "axios";
 import toast from "react-hot-toast";
 import "../styles/CartStyles.css";
+import myKey from './key';
 
 const CartPage = () => {
   const [auth, setAuth] = useAuth();
@@ -16,6 +18,15 @@ const CartPage = () => {
   // const [instance, setInstance] = useState("");
   // const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  let checkout = new KhaltiCheckout(config);
+  let buttonStyles = {
+    backgroundColor: "purple",
+    padding: "10px",
+    color: "white",
+    cursor: "pointer",
+    fontWeight: "bold",
+    border: "1px solid white",
+  };
 
   //total price
   const totalPrice = () => {
@@ -192,6 +203,17 @@ const CartPage = () => {
                   </>
                 )}
               </div> */}
+              <div className="mt-2">
+               
+
+                    <button
+                      onClick={() => checkout.show({ amount: 10000 })}
+                      style={buttonStyles}
+                    >
+                      Pay Via Khalti
+                    </button>
+               
+              </div>
             </div>
           </div>
         </div>

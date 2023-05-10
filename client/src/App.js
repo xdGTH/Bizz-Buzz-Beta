@@ -13,12 +13,12 @@ import ForgotPassword from "./newnew/pages/reset";
 import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import CreateCategory from "./pages/Admin/CreateCategory";
-import CreateProduct from "./pages/Admin/CreateProduct";
+// import CreateProduct from "./pages/Admin/CreateProduct";
 import Users from "./pages/Admin/Users";
 import Orders from "./pages/user/Orders";
 import Profile from "./pages/user/Profile";
-import Products from "./pages/Admin/Products";
-import UpdateProduct from "./pages/Admin/UpdateProduct";
+// import Products from "./pages/Admin/Products";
+// import UpdateProduct from "./pages/Admin/UpdateProduct";
 import Search from "./pages/Search";
 import ProductDetails from "./pages/ProductDetails";
 import Categories from "./pages/Categories";
@@ -32,7 +32,9 @@ import VendorProductUpdate from "./pages/Vendor/VendorProductUpdate";
 import VendorProducts from "./pages/Vendor/VendorProduct";
 import VendorUsers from "./pages/Vendor/VendorUsers";
 import VendorOrders from './pages/Vendor/VendorOrders';
+import { useAuth } from "../../context/auth";
 
+// user
 function App() {
   return (
     <>
@@ -51,9 +53,9 @@ function App() {
         <Route path="/dashboard" element={<AdminRoute />}>
           <Route path="admin" element={<AdminDashboard />} />
           <Route path="admin/create-category" element={<CreateCategory />} />
-          <Route path="admin/create-product" element={<CreateProduct />} />
-          <Route path="admin/product/:slug" element={<UpdateProduct />} />
-          <Route path="admin/products" element={<Products />} />
+          {/* <Route path="admin/create-product" element={<CreateProduct />} /> */}
+          {/* <Route path="admin/product/:slug" element={<UpdateProduct />} /> */}
+          {/* <Route path="admin/products" element={<Products />} /> */}
           <Route path="admin/users" element={<Users />} />
           <Route path="admin/orders" element={<AdminOrders />} />
         </Route>
