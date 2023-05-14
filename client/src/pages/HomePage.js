@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
+import video from "./bizzbuzz.mp4"
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -115,6 +116,11 @@ const HomePage = () => {
         alt="bannerimage"
         width={"100%"}
       />
+
+<div className="overlay"></div>
+        <video src={video} autoPlay muted loop
+        width={"100%"} />
+
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">
         <div className="col-md-3 filters">
@@ -129,6 +135,8 @@ const HomePage = () => {
               </Checkbox>
             ))}
           </div>
+
+          
           {/* price filter */}
           <h4 className="text-center mt-4">Filter By Price</h4>
           <div className="d-flex flex-column">
@@ -165,7 +173,7 @@ const HomePage = () => {
                     <h5 className="card-title card-price">
                       {p.price.toLocaleString("en-US", {
                         style: "currency",
-                        currency: "USD",
+                        currency: "NRP",
                       })}
                     </h5>
                   </div>

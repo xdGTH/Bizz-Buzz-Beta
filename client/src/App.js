@@ -32,7 +32,7 @@ import VendorProductUpdate from "./pages/Vendor/VendorProductUpdate";
 import VendorProducts from "./pages/Vendor/VendorProduct";
 import VendorUsers from "./pages/Vendor/VendorUsers";
 import VendorOrders from './pages/Vendor/VendorOrders';
-import { useAuth } from "../../context/auth";
+// import { useAuth } from "../../context/auth";
 
 // user
 function App() {
