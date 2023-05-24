@@ -117,7 +117,7 @@ const HomePage = () => {
       />
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">
-        <div className="col-md-3 filters">
+        <div className="col-md-3 filters" style={{backgroundColor: "#c8c9c7"}}>
           <h4 className="text-center">Filter By Category</h4>
           <div className="d-flex flex-column">
             {categories?.map((c) => (
@@ -165,7 +165,7 @@ const HomePage = () => {
                     <h5 className="card-title card-price">
                       {p.price.toLocaleString("en-US", {
                         style: "currency",
-                        currency: "USD",
+                        currency: "NPR",
                       })}
                     </h5>
                   </div>

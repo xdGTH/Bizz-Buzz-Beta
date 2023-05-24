@@ -37,12 +37,23 @@ const CartPage = () => {
       });
       return total.toLocaleString("en-US", {
         style: "currency",
-        currency: "USD",
+        currency: "NRP",
       });
     } catch (error) {
       console.log(error);
     }
   };
+  const cost =()=>{
+    try{
+      let cost =0;
+      cart?.map((item)=>{
+        cost = cost + item.price;
+      });
+      return cost*100;
+    }catch(error){
+      console.log(error);
+    }
+  }
   //detele item
   const removeCartItem = (pid) => {
     try {
@@ -207,7 +218,7 @@ const CartPage = () => {
                
 
                     <button
-                      onClick={() => checkout.show({ amount: 10000 })}
+                      onClick={() => checkout.show({ amount: cost()})}
                       style={buttonStyles}
                     >
                       Pay Via Khalti

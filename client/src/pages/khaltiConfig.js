@@ -4,7 +4,7 @@ let config = {
   // replace this key with yours
   publicKey: myKey.publicTestKey,
   productIdentity: "123766",
-  productName: "My Ecommerce Store",
+  productName: "Bizz Buzz",
   productUrl: "http://localhost:3000",
   eventHandler: {
     onSuccess(payload) {
