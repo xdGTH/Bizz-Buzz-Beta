@@ -5,11 +5,8 @@ import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom";
 import KhaltiCheckout from "khalti-checkout-web";
 import config from "./khaltiConfig";
-import { AiFillWarning } from "react-icons/ai";
-import axios from "axios";
-import toast from "react-hot-toast";
 import "../styles/CartStyles.css";
-import myKey from './key';
+
 
 const CartPage = () => {
   const [auth, setAuth] = useAuth();
