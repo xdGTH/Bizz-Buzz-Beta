@@ -1,5 +1,6 @@
 import myKey from "./key";
 import axios from "axios";
+const SERVER_HOST = "http://localhost:8080"
 let config = {
   // replace this key with yours
   "publicKey": myKey.publicTestKey,
@@ -10,6 +11,7 @@ let config = {
     onSuccess(payload) {
       // hit merchant api for initiating verfication
       console.log(payload);
+      
       let data = {
         token: payload.token,
         amount: payload.amount,
@@ -19,7 +21,7 @@ let config = {
         headers: {'Authorization':myKey.secretKey}
       };
 
-      axios.post("https://khalti.com/api/v2/payment/verify/", data, config)
+      axios.post(`${SERVER_HOST}/charge`, data, config)
       .then(response => {
       console.log(response.data);
       })
@@ -38,6 +40,7 @@ let config = {
       //   .catch((error) => {
       //     console.log(error);
       //   });
+
     },
     // onError handler is optional
     onError(error) {

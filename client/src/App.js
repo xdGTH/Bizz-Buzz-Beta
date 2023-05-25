@@ -33,6 +33,7 @@ import VendorProducts from "./pages/Vendor/VendorProduct";
 import VendorUsers from "./pages/Vendor/VendorUsers";
 import VendorOrders from './pages/Vendor/VendorOrders';
 // import { useAuth } from "../../context/auth";
+import Barchart from './charts/Barchart';
 
 // user
 function App() {
@@ -66,6 +67,7 @@ function App() {
           <Route path="vendor/products" element={<VendorProducts />} />
           <Route path="vendor/users" element={<VendorUsers />} />
           <Route path="vendor/orders" element={<VendorOrders />} />
+          <Route path ="vendor/barchart" element= {<Barchart />}/>
         </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<Reset />} />

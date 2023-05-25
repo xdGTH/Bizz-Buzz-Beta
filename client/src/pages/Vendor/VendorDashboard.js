@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
-import UserMenu from "../../components/Layout/VendorMenu";
+import VendorMenu from "../../components/Layout/VendorMenu";
 import { useAuth } from "../../context/auth";
 import { Card, Avatar } from "antd";
 import { UserOutlined, MailOutlined, EnvironmentOutlined } from "@ant-design/icons";
@@ -37,7 +37,7 @@ const VendorDashboard = () => {
       <div className="container-fluid" style={containerStyle}>
         <div className="row">
           <div className="col-md-3">
-            <UserMenu />
+            <VendorMenu />
           </div>
           <div className="col-md-9">
             <div style={cardStyle}>
