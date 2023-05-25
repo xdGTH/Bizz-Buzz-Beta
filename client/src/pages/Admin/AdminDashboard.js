@@ -77,9 +77,9 @@ const AdminDashboard = () => {
             <div style={styles.infoItem}>Name: {auth?.user?.name}</div>
             <div style={styles.infoItem}>Email: {auth?.user?.email}</div>
             <div style={styles.infoItem}>Contact: {auth?.user?.phone}</div>
-            <button style={styles.button} onClick={handleChangeSettingsClick}>
+            {/* <button style={styles.button} onClick={handleChangeSettingsClick}>
               Change Settings
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
