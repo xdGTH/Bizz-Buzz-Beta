@@ -1,5 +1,6 @@
 import bgimg from "./images/bgimg.jpg";
 import Box from "@mui/material/Box";
+import image from "./images/image.png";
 import Grid from "@mui/material/Grid";
 import bg from "./images/bg.png";
 import Button from "@mui/material/Button";
@@ -111,12 +112,12 @@ const Reset = () => {
                             <Grid item xs={12} sm={12} lg={6}>
                                 <Box
                                     style={{
-                                        backgroundImage: `url(${bg})`,
+                                        backgroundImage: `url(${image})`,
                                         backgroundSize: "cover",
-                                        marginTop: "40px",
-                                        marginLeft: "15px",
-                                        marginRight: "15px",
-                                        height: "63vh",
+                                        marginTop: "5vh",
+                                        marginLeft: "0px",
+                                        marginRight: "0px",
+                                        height: "65vh",
                                         color: "#f5f5f5",
                                     }}
                                 ></Box>

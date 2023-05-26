@@ -64,7 +64,7 @@ const VendorDashboard = () => {
                   <p style={{ fontSize: '16px', margin: 0 }}>Total Orders</p>
                 </Card>
                 <Card title="Account Balance" style={{ width: '48%' }}>
-                  <p style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>$500</p>
+                  <p style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>Rs500</p>
                   <p style={{ fontSize: '16px', margin: 0 }}>Current Balance</p>
                 </Card>
               </div>

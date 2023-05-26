@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import KhaltiCheckout from "khalti-checkout-web";
 import config from "./khaltiConfig";
 import "../styles/CartStyles.css";
+import Swal from 'sweetalert2'
 
 
 const CartPage = () => {
@@ -22,6 +23,9 @@ const CartPage = () => {
     border: "1px solid white",
   };
 
+// CommonJS
+const Swal = require('sweetalert2')
+
   //total price
   const totalPrice = () => {
     try {
@@ -37,14 +41,14 @@ const CartPage = () => {
       console.log(error);
     }
   };
-  const cost =()=>{
-    try{
-      let cost =0;
-      cart?.map((item)=>{
+  const cost = () => {
+    try {
+      let cost = 0;
+      cart?.map((item) => {
         cost = cost + item.price;
       });
-      return cost*100;
-    }catch(error){
+      return cost * 100;
+    } catch (error) {
       console.log(error);
     }
   }
@@ -61,6 +65,13 @@ const CartPage = () => {
     }
   };
 
+  const removeAllItems = () => {
+    while (cart.length >0){
+      
+    }
+  };
+
+
   return (
     <Layout>
       <div className=" cart-page">
@@ -72,9 +83,8 @@ const CartPage = () => {
                 : `Hello  ${auth?.token && auth?.user?.name}`}
               <p className="text-center">
                 {cart?.length
-                  ? `You Have ${cart.length} items in your cart ${
-                      auth?.token ? "" : "please login to checkout !"
-                    }`
+                  ? `You Have ${cart.length} items in your cart ${auth?.token ? "" : "please login to checkout !"
+                  }`
                   : " Your Cart Is Empty"}
               </p>
             </h1>
@@ -152,15 +162,42 @@ const CartPage = () => {
                 </div>
               )}
               <div className="mt-2">
-               
 
-                    <button
-                      onClick={() => checkout.show({ amount: cost()})}
-                      style={buttonStyles}
-                    >
-                      Pay Via Khalti
-                    </button>
-               
+
+                <button
+                  onClick={() => checkout.show({ amount: cost() })}
+                  style={buttonStyles}
+                >
+                  Pay Via Khalti
+                </button>
+
+              </div>
+              <div className="mt-2">
+
+
+                <button
+                  onClick={() =>Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You want to confirm your order!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, confirm it!'
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                      Swal.fire(
+                        'Confirmed!',
+                        'Your order has been confirmed.',
+                        'success'
+                      )
+                    }
+                  })}
+                  
+                >
+                  Cash On Delivery
+                </button>
+
               </div>
             </div>
           </div>

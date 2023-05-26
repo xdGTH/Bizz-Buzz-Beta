@@ -47,7 +47,7 @@ router.put("/profile", requireSignIn, updateProfileController);
 router.get("/orders", requireSignIn, getOrdersController);
 
 //all orders
-router.get("/all-orders", requireSignIn, isAdmin||isVendor, getAllOrdersController);
+router.get("/all-orders", requireSignIn, isVendor, getAllOrdersController);
 
 // order status update
 router.put(

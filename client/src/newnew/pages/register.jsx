@@ -130,13 +130,13 @@ const Register = () => {
                                 >
                                     <ThemeProvider theme={darkTheme}>
                                         <Container>
-                                            <Box height={10} />
+                                            <Box height={15} />
                                             <Box >
-                                                <Box sx={center}>
+                                                {/* <Box sx={center}>
                                                     <Avatar sx={{ ml: "35px", mb: "4px", bgcolor: "#ffffff" }}>
                                                         <LockIcon />
                                                     </Avatar>
-                                                </Box>
+                                                </Box> */}
                                                 <Typography component="h1" variant="h4" align="center">
                                                     Create Account
                                                 </Typography>

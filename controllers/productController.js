@@ -5,7 +5,6 @@ import categoryModel from "../models/categoryModel.js";
 
 import fs from "fs";
 import slugify from "slugify";
-// import braintree from "braintree";
 import dotenv from "dotenv";
 
 dotenv.config();
