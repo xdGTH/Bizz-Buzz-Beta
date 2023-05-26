@@ -21,12 +21,7 @@ const VendorMenu = () => {
           >
             Products
           </NavLink>
-          <NavLink
-            to="/dashboard/vendor/barchart"
-            className="list-group-item list-group-item-action"
-          >
-            Bar Chart
-          </NavLink>
+          
           <NavLink
             to="/dashboard/vendor/users"
             className="list-group-item list-group-item-action"

@@ -57,6 +57,7 @@ function App() {
           {/* <Route path="admin/create-product" element={<CreateProduct />} /> */}
           {/* <Route path="admin/product/:slug" element={<UpdateProduct />} /> */}
           {/* <Route path="admin/products" element={<Products />} /> */}
+          <Route path ="admin/barchart" element= {<Barchart />}/>
           <Route path="admin/users" element={<Users />} />
           <Route path="admin/orders" element={<AdminOrders />} />
         </Route>
@@ -67,7 +68,7 @@ function App() {
           <Route path="vendor/products" element={<VendorProducts />} />
           <Route path="vendor/users" element={<VendorUsers />} />
           <Route path="vendor/orders" element={<VendorOrders />} />
-          <Route path ="vendor/barchart" element= {<Barchart />}/>
+        
         </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<Reset />} />
